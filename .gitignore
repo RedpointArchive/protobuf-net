@@ -1,0 +1,18 @@
+# Ignore files.
+bin
+obj
+
+# Generated solution and project files
+*.userprefs
+*.Linux.csproj
+*.Linux.sln
+*.Windows.csproj
+*.Windows.sln
+*.Android.csproj
+*.Android.sln
+*.nuspec
+*.nupkg
+
+StyleCop.Cache
+*.csproj.user
+*.suo
