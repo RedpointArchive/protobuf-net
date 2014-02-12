@@ -3,6 +3,7 @@
   <Properties>
     <CustomDefinitions>
       <Platform Name="Android">MONODROID;</Platform>
+      <Platform Name="Ouya">MONODROID;</Platform>
       <Platform Name="iOS">IOS;</Platform>
     </CustomDefinitions>
   </Properties>
