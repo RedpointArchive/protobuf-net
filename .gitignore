@@ -10,6 +10,8 @@ obj
 *.Windows.sln
 *.Android.csproj
 *.Android.sln
+*.Ouya.csproj
+*.Ouya.sln
 *.nuspec
 *.nupkg
 
