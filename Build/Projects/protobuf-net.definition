@@ -13,9 +13,6 @@
     <Reference Include="System.Xml" />
   </References>
   <Files>
-    <None Include="Properties\AndroidManifest.xml">
-      <Platforms>Android</Platforms>
-    </None>
     <Compile Include="BclHelpers.cs" />
     <Compile Include="BufferExtension.cs" />
     <Compile Include="BufferPool.cs" />
@@ -108,5 +105,8 @@
     <Compile Include="WireType.cs">
       <SubType>Code</SubType>
     </Compile>
+    <None Include="Properties\AndroidManifest.xml">
+      <Platforms>Android</Platforms>
+    </None>
   </Files>
 </Project>
