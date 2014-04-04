@@ -4,14 +4,8 @@ obj
 
 # Generated solution and project files
 *.userprefs
-*.Linux.csproj
-*.Linux.sln
-*.Windows.csproj
-*.Windows.sln
-*.Android.csproj
-*.Android.sln
-*.Ouya.csproj
-*.Ouya.sln
+*.csproj
+*.sln
 *.nuspec
 *.nupkg
 
