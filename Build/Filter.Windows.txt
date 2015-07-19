@@ -1,6 +1,0 @@
-include ^protobuf-net/bin/Windows/AnyCPU/Debug/protobuf-net\.dll$
-include ^Build/protobuf-net\.Publish\.definition$
-include ^Build/Module\.xml$
-
-rewrite ^protobuf-net/bin/Windows/AnyCPU/Debug/protobuf-net\.dll$ protobuf-net/protobuf-net.dll
-rewrite ^Build/protobuf-net\.Publish\.definition$ Build/Projects/protobuf-net.definition
