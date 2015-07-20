@@ -105,8 +105,5 @@
     <Compile Include="WireType.cs">
       <SubType>Code</SubType>
     </Compile>
-    <None Include="Properties\AndroidManifest.xml">
-      <Platforms>Android</Platforms>
-    </None>
   </Files>
 </Project>
