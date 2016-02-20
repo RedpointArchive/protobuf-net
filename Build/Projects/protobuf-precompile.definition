@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Name="protobuf-precompile" Path="protobuf-precompile" Type="Library" Platforms="Windows,MacOS,Linux">
+  <References>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="IKVM.Reflection" />
+    <Reference Include="protobuf-net-ikvm" />
+  </References>
+  <Files>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </Files>
+</Project>

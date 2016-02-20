@@ -7,7 +7,7 @@ namespace ProtoBuf
     /// </summary>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Interface,
         AllowMultiple = false, Inherited = false)]
-    public sealed class ProtoContractAttribute : Attribute
+    public class ProtoContractAttribute : Attribute
     {
         /// <summary>
         /// Gets or sets the defined name of the type.

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Text;
 using ProtoBuf.Meta;
 
@@ -318,6 +319,17 @@ namespace ProtoBuf.Precompile
             {
                 string nameOnly = args.Name.Split(',')[0];
 
+                if (nameOnly == "protobuf-net-ikvm")
+                {
+                    // Return protobuf-net existing assembly instead.
+                    var protobuf = model.Universe.GetAssemblies().FirstOrDefault(x => x.GetName().Name == "protobuf-net");
+                    if (protobuf == null)
+                    {
+                        throw new InvalidOperationException("Unable to find non-IKVM version of protobuf-net...");
+                    }
+                    return protobuf;
+                }
+
                 if (nameOnly == "IKVM.Reflection" && args.RequestingAssembly != null && args.RequestingAssembly.FullName.StartsWith("protobuf-net"))
                 {
                     throw new InvalidOperationException("This operation needs access to the protobuf-net.dll used by your library, **in addition to** the protobuf-net.dll that is included with the precompiler; the easiest way to do this is to ensure the referenced protobuf-net.dll is in the same folder as your library.");
@@ -366,13 +378,18 @@ namespace ProtoBuf.Precompile
 
                     foreach (var attrib in type.__GetCustomAttributes(attributeType, true))
                     {
-                        string name = attrib.Constructor.DeclaringType.FullName;
-                        switch(name) 
+                        var current = attrib.AttributeType;
+                        while (current != null && current.FullName != "System.Attribute")
                         {
-                            case "ProtoBuf.ProtoContractAttribute":
+                            if (current.FullName == "ProtoBuf.ProtoContractAttribute")
+                            {
                                 add = true;
                                 break;
+                            }
+
+                            current = current.BaseType;
                         }
+
                         if (add) break;
                     }
                     if (add) toAdd.Add(type);

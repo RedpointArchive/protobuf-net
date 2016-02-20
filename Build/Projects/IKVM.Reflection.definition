@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ExternalProject Name="IKVM.Reflection">
  
-  <Binary
-    Name="IKVM.Reflection" 
-    Path="Tools/IKVM.Reflection.dll" />
+  <Platform Type="Windows">
+    <Binary
+      Name="IKVM.Reflection" 
+      Path="Tools/IKVM.Reflection.dll" />
+  </Platform>
+  <Platform Type="MacOS">
+    <Binary
+      Name="IKVM.Reflection" 
+      Path="Tools/IKVM.Reflection.dll" />
+  </Platform>
+  <Platform Type="Linux">
+    <Binary
+      Name="IKVM.Reflection" 
+      Path="Tools/IKVM.Reflection.dll" />
+  </Platform>
 
 </ExternalProject>

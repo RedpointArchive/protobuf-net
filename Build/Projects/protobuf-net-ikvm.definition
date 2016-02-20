@@ -1,7 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Name="protobuf-net" Path="protobuf-net" Type="Library">
+<Project Name="protobuf-net-ikvm" Path="protobuf-net" Type="Library">
   <Properties>
     <CustomDefinitions>
+      <Platform Name="Windows">FEAT_COMPILER;FEAT_IKVM</Platform>
+      <Platform Name="MacOS">FEAT_COMPILER;FEAT_IKVM</Platform>
+      <Platform Name="Linux">FEAT_COMPILER;FEAT_IKVM</Platform>
       <Platform Name="Android">MONODROID;</Platform>
       <Platform Name="Ouya">MONODROID;</Platform>
       <Platform Name="iOS">IOS;</Platform>
@@ -11,6 +14,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="IKVM.Reflection" />
     <Reference Include="protobuf-include" />
   </References>
   <Files />
