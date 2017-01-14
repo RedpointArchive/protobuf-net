@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Module>
-  <Name>protobuf-net</Name>
+  <Name>protobuf-net.Redpoint</Name>
+  <Authors>Redpoint Games</Authors>
+  <SemanticVersion>0.1.0</SemanticVersion>
+  <Description>A port of protobuf-net with support for additional platforms.</Description>
+  <LicenseUrl>https://opensource.org/licenses/MIT</LicenseUrl>
+  <GitRepositoryUrl>https://github.com/RedpointGames/protobuf-net</GitRepositoryUrl>
   <DefaultAction>resync</DefaultAction>
   <GenerateNuGetRepositories>true</GenerateNuGetRepositories>
 </Module>
